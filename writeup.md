@@ -12,7 +12,13 @@ The goals of this project are the following:
 * Summarize the results with a written report
 
 
+[//]: # (Image References)
 
+[image0]: web_image0.png "Ahead Only"
+[image1]: web_image1.png "Turn Right Ahead"
+[image2]: web_image2.png "Go Straight or Left"
+[image3]: web_image3.png "Right-of-Way at Next Intersection"
+[image4]: web_image4.png "Speed Limit (30km/h)"
 
 ### Rubric Points
 
@@ -91,11 +97,11 @@ I stuck with the LeNet model because it seems to perform well on classifying ima
 
 Here are five German traffic signs that I found on the web:
 
-<img src = "data/online/web_image0.png" alt = "">
-<img src = "data/online/web_image1.png" alt = "">
-<img src = "data/online/web_image2.png" alt = "">
-<img src = "data/online/web_image3.png" alt = "">
-<img src = "data/online/web_image4.png" alt = "">
+![alt text][image0]
+![alt text][image1]
+![alt text][image2]
+![alt text][image3]
+![alt text][image4]
 
 
 I resized these images to the same size as the dataset.  I performed the same preprocessing on them as I did with the initial dataset (grayscale, then normalization).
@@ -115,7 +121,7 @@ The model was able to correctly guess 4 of the 5 traffic signs, which gives an a
 
 ### Predictions
 
-Here are the softmax probabilities and predictions for the 5 web images.  The highest probability guess was correct in each case except for the third, in which the 2nd highest was the correct image.
+Here are the softmax probabilities and predictions for the 5 web images.  The highest probability guess was correct in each case except for the third, in which the 2nd highest was the correct image (correct sign in *italics*).
 
 | Probability         	|     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
@@ -147,4 +153,4 @@ Here are the softmax probabilities and predictions for the 5 web images.  The hi
 | .06     				| Go Straight or Left 										|
 | .04					| Ahead Only								|
 | .04	      			| Turn Right Ahead					 				|
-| .03				    | Speed Limimt (80km/h)      							|
+| .03				    | Speed Limit (80km/h)      							|
