@@ -125,30 +125,31 @@ Here are the softmax probabilities and predictions for the 5 web images.  The hi
 
 | Probability         	|     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
+|First Sign ||
 | .51         			| *Ahead Only* 									|
 | .05     				| Dangerous Curve to the right 										|
 | .05					| No Passing											|
 | .01	      			| Turn Left Ahead					 				|
 | .01				    | Road Work      							|
-|||
+|Second Sign||
 | .35         			| *Turn Right Ahead*  									|
 | .11     				| General Caution 										|
 | .11					| Road Narrows to the Right											|
 | .09	      			| Go Straight or Left					 				|
 | .09				    | Ahead Only      							|
-|||
+|Third Sign||
 | .15         			| Traffic Signals   									|
 | .14     				| *Go Straight or Left* 										|
 | .11					| Bumpy Road											|
 | .11	      			| Dangerous Curve to the Left					 				|
 | .10				    | General Caution      							|
-|||
+|Fourth Sign||
 | .37         			| *Right-of-Way at Next Intersection*   									|
 | .13     				| Pedestrians									|
 | .09					| Double Curve											|
 | .04	      			| Road Work					 				|
 | .01				    | Speed Limit (80km/h)      							|
-|||
+|Fifth Sign||
 | .24         			| *Speed Limit (30km/h)*   									|
 | .06     				| Go Straight or Left 										|
 | .04					| Ahead Only								|
