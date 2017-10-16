@@ -91,11 +91,11 @@ I stuck with the LeNet model because it seems to perform well on classifying ima
 
 Here are five German traffic signs that I found on the web:
 
-![alt text](d:\udacity\carND\CarND-Traffic-Sign-Classifier-Project\data\online\web_image0.png)
-
-<img src = "./data/online/web_image0.png" alt = "">
-
-<img src = "visualize_cnn.png" >
+<img src = "data/online/web_image0.png" alt = "">
+<img src = "data/online/web_image1.png" alt = "">
+<img src = "data/online/web_image2.png" alt = "">
+<img src = "data/online/web_image3.png" alt = "">
+<img src = "data/online/web_image4.png" alt = "">
 
 
 I resized these images to the same size as the dataset.  I performed the same preprocessing on them as I did with the initial dataset (grayscale, then normalization).
