@@ -59,7 +59,7 @@ My final model consisted of the following layers:
 | Layer 1: Convolution 5x5     	| 1x1 stride, VALID padding, outputs 28x28x32 	|
 | RELU					|												|
 | Max pooling	      	| 2x2 stride,  outputs 14x14x32 				|
-| Layer 2: Convolution 3x3	    | 1x1 stride, VALID padding, outputs 10x10x64      	
+| Layer 2: Convolution 5x5	    | 1x1 stride, VALID padding, outputs 10x10x64      	
 |				RELU				|  |
 | Max pooling | 2x2 stride, outputs 5x5x64
 | Flatten to 1600 | |
@@ -83,9 +83,9 @@ As mentioned before, accuracy was a bit lower when training on color images.  Co
 *4. Model Solution*
 
 My final model results were:
-* training set accuracy of 99.6%
-* validation set accuracy of 94.5%
-* test set accuracy of 84.8%
+* training set accuracy of 99.5%
+* validation set accuracy of 93.3%
+* test set accuracy of 80.3%
 
 Initially, I used the LeNet approach nearly identical to the one given in the online studies.  That model on color images never exceeded 85% training accuracy.  I realized converting to grayscale would enable faster processing and it increased accuracy as well.  However, obtaining an accuracy above 93% eluded me until I increased the depth of the convolution layers as well as the fully-connected layers.  Not until then, along with careful selection of the hyperparameters did I achieve the target accuracy rate.
 
@@ -117,41 +117,41 @@ Here are the results of the prediction:
 | Speed limit (30km/h)			| Speed limit (30km/h)      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This is very close to the accuracy on the test dataset which was 84.8%.
+The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This is almost identical to the accuracy of the test set, which was 80.3%.
 
 ### Predictions
 
-Here are the softmax probabilities and predictions for the 5 web images.  The highest probability guess was correct in each case except for the third, in which the 2nd highest was the correct image (correct sign in *italics*).
+Here are the softmax probabilities and predictions for the 5 web images.  The highest probability guess was correct in each case except for the third, in which the 3rd highest was the correct image (correct sign in *italics*). Interestingly, the model had a certainly of 85% for Road Work for the 3rd sign, while only a 5% certainty for the correct sign, Go Straight or Left.
 
 | Probability         	|     Prediction	        					|
 |:---------------------:|:---------------------------------------------:|
 |First Sign ||
-| .51         			| *Ahead Only* 									|
-| .05     				| Dangerous Curve to the right 										|
-| .05					| No Passing											|
-| .01	      			| Turn Left Ahead					 				|
-| .01				    | Road Work      							|
+| .99         			| *Ahead Only* 									|
+| <.01     				| Speed Limit (60km/h) 										|
+| <.01					| Wild Animals Crossing											|
+| <.01	      			| Turn Right Ahead					 				|
+| <.01				    | Right-of-Way Next Intersection      							|
 |Second Sign||
-| .35         			| *Turn Right Ahead*  									|
-| .11     				| General Caution 										|
-| .11					| Road Narrows to the Right											|
-| .09	      			| Go Straight or Left					 				|
-| .09				    | Ahead Only      							|
+| .99         			| *Turn Right Ahead*  									|
+| <.01     				| Traffic Signals 										|
+| <.01					| Go Straight or Left											|
+| <.01	      			| Roundabout Mandatory					 				|
+| <.01				    | Pedestrians      							|
 |Third Sign||
-| .15         			| Traffic Signals   									|
-| .14     				| *Go Straight or Left* 										|
-| .11					| Bumpy Road											|
-| .11	      			| Dangerous Curve to the Left					 				|
-| .10				    | General Caution      							|
+| .85         			| Road Work   									|
+| .09     				| Dangerous Curve to the Left 										|
+| .05					| *Go Straight or Left*											|
+| <.01	      			| Right-of-Way Next Intersection					 				|
+| <.01				    | Keep Right      							|
 |Fourth Sign||
-| .37         			| *Right-of-Way at Next Intersection*   									|
-| .13     				| Pedestrians									|
-| .09					| Double Curve											|
-| .04	      			| Road Work					 				|
-| .01				    | Speed Limit (80km/h)      							|
+| .99         			| *Right-of-Way at Next Intersection*   									|
+| <.01     				| Double Curve									|
+| <.01					|	Beware of Ice/Snow										|
+| <.01	      			| Slippery Road					 				|
+| <.01				    | Pedestrians      							|
 |Fifth Sign||
-| .24         			| *Speed Limit (30km/h)*   									|
-| .06     				| Go Straight or Left 										|
-| .04					| Ahead Only								|
-| .04	      			| Turn Right Ahead					 				|
-| .03				    | Speed Limit (80km/h)      							|
+| .99        			| *Speed Limit (30km/h)*   									|
+| <.01    				| Speed Limit (50km/h) 										|
+| <.01					| Speed Limit (70km/h)								|
+| <.01	      			| Speed Limit (20km/h)					 				|
+| <.01				    | Keep Left      							|
